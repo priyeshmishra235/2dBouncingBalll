@@ -1,4 +1,4 @@
-## 2D Space:
+## 2D Bouncing Ball:
 Collision using momentum and energy conservation
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/e8a77b47-44d6-4149-95db-698e094aedfd" />
 
