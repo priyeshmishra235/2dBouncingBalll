@@ -47,8 +47,8 @@ public:
 
     glBindVertexArray(vao);
     glLineWidth(5.0f);
-    glDrawElements(GL_LINES, static_cast<GLsizei>(indexCount), GL_UNSIGNED_INT,
-                   0);
+    glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(indexCount),
+                   GL_UNSIGNED_INT, 0);
     glBindVertexArray(0);
   }
 
@@ -57,13 +57,13 @@ public:
     std::vector<float> vertices = {-s, -s, s,  s, -s, s,  s, s, s,  -s, s, s,
                                    -s, -s, -s, s, -s, -s, s, s, -s, -s, s, -s};
 
-    // std::vector<unsigned int> indices = {0, 1, 2, 2, 3, 0, 5, 4, 7, 7, 6, 5,
-    //                                      1, 5, 6, 6, 2, 1, 4, 0, 3, 3, 7, 4,
-    //                                      3, 2, 6, 6, 7, 3, 4, 5, 1, 1, 0, 4};
+    std::vector<unsigned int> indices = {0, 1, 2, 2, 3, 0, 5, 4, 7, 7, 6, 5,
+                                         1, 5, 6, 6, 2, 1, 4, 0, 3, 3, 7, 4,
+                                         3, 2, 6, 6, 7, 3, 4, 5, 1, 1, 0, 4};
 
-    // for wireframe
-    std::vector<unsigned int> indices = {0, 1, 1, 2, 2, 3, 3, 0, 4, 5, 5, 6,
-                                         6, 7, 7, 4, 0, 4, 1, 5, 2, 6, 3, 7};
+    // // for wireframe
+    // std::vector<unsigned int> indices = {0, 1, 1, 2, 2, 3, 3, 0, 4, 5, 5, 6,
+    //                                      6, 7, 7, 4, 0, 4, 1, 5, 2, 6, 3, 7};
     indexCount = indices.size();
 
     glGenVertexArrays(1, &vao);

@@ -85,7 +85,7 @@ public:
   }
 
   glm::mat4 GetProjectionMatrix(float aspectRatio, float nearPlane = 0.1f,
-                                float farPlane = 10000.0f) const {
+                                float farPlane = 1000.0f) const {
     return glm::perspective(glm::radians(Zoom), aspectRatio, nearPlane,
                             farPlane);
   }

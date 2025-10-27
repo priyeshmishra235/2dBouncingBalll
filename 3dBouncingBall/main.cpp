@@ -34,7 +34,7 @@ int main() {
   for (int i = 0; i < totalBalls; ++i) {
     auto b = std::make_unique<Ball>(25.0f);
     b->setRandParameters(halfSize);
-    b->color = glm::vec3(0.5f, 0.5f, 0.5f);
+    // b->color = glm::vec3(0.5f, 0.5f, 0.5f);
     balls.push_back(std::move(b));
   }
 
@@ -72,7 +72,7 @@ int main() {
       for (size_t i = 0; i < balls.size(); ++i) {
         for (size_t j = i + 1; j < balls.size(); ++j) {
           if (balls[i]->ballCollisions(*balls[j])) {
-            balls[i]->color = glm::vec3(1.0f, 0.0f, 0.0f);
+            // balls[i]->color = glm::vec3(0.0f, 0.0f, 1.0f);
           }
         }
       }

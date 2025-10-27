@@ -259,7 +259,7 @@ public:
   void setRandParameters(float halfSize) {
     setRandCenter(halfSize);
     setRandVelocity();
-    // setRandColor();
+    setRandColor();
     setRandRadius();
     setRandMass();
   }
